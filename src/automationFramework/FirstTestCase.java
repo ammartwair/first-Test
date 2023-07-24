@@ -7,7 +7,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 public class FirstTestCase {
 
 	public static void main(String[] args) throws InterruptedException {
-		
+
 		System.setProperty("webdriver.chrome.driver","C:\\Program Files\\Google\\Chrome\\Application\\chromedriver.exe");
 		WebDriver driver = new ChromeDriver();
 		driver.get("https://www.lancome-usa.com/");
@@ -24,26 +24,26 @@ public class FirstTestCase {
 		}
 		catch (Exception e) {
 			System.out.println("The logo isn't displayed");
-		}    
-	
+		}
+
 		try {
 			driver.findElement(By.xpath("//*[@id=\'email-011935\']"));
 			System.out.println("The Signup link is displayed");
-		} 
+		}
 		catch (Exception e) {
 			System.out.println("The Signup link isn't displayed");
 		}
 		try {
 		    driver.findElement(By.xpath("/html/body/div[10]/header/div[1]/div[3]/div[1]/div[4]/div[1]/div[3]/div/div/div/button/i"));
 			System.out.println("My cart link is displayed");
-		} 
+		}
 		catch (Exception e) {
 			System.out.println("My cart link isn't displayed");
 		}
 		try {
 		    driver.findElement(By.xpath("/html/body/div[10]/header/div[1]/div[3]/div[1]/div[4]/div[1]/div[1]/div/a"));
 			System.out.println("My account link is displayed");
-		} 
+		}
 		catch (Exception e) {
 			System.out.println("My account link isn't displayed");
 		}
@@ -61,7 +61,7 @@ public class FirstTestCase {
 		}
 		driver.findElement(By.xpath("//input[@type='email']")).sendKeys("twairammar@gmail.com");
 		driver.findElement(By.xpath("//input[@type='password']")).sendKeys("Ammar@123");
-		driver.findElement(By.xpath("/html/body/div[10]/div[2]/div/div[2]/div[2]/div[1]/div/div/form/div[10]/button")).click();		
+		driver.findElement(By.xpath("/html/body/div[10]/div[2]/div/div[2]/div[2]/div[1]/div/div/form/div[10]/button")).click();
         Thread.sleep(2000);
 		try {
         String verify = driver.findElement(By.xpath("/html/body/section/div[1]/div/h1")).getText().toString();
@@ -74,6 +74,6 @@ public class FirstTestCase {
 		catch(Exception e){
 			System.out.println("Someting went wrong !");
 		}
-        
+
 	}
 }
