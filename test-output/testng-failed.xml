@@ -3,11 +3,11 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="automationFramework.softAssertion">
+      <class name="automationFramework.ParameterWithTestNGXML">
         <methods>
-          <include name="hardAssert"/>
+          <include name="testParameterWithXML" invocation-numbers="0"/>
         </methods>
-      </class> <!-- automationFramework.softAssertion -->
+      </class> <!-- automationFramework.ParameterWithTestNGXML -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

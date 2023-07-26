@@ -1,9 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name = "Login Regression">
-	<test name = "Login Regression">
+<suite name = "TestSuite" thread-count="1">
+	<parameter name="author" value="demo"/>
+	<parameter name="searchKey" value="India"/>
+	<test name = "testGuru">
 		<classes>
-			<class name = "automationFramework.TestNG" />
+			<class name = "automationFramework.ParameterWithTestNGXML">
+				</class>
 		</classes>
-		</test><!-- Test -->
-</suite><!-- Suite -->
+		</test>
+</suite>
