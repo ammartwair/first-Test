@@ -21,5 +21,4 @@ public class Apache_POI_TC {
 	// This is to send the PASS value to the Excel sheet in the result column.
 	ExcelUtils.setCellData("Pass", 1, 3);
 	}
-
 }
