@@ -10,8 +10,8 @@ public class ExcelUtils {
 	public static XSSFSheet ExcelWSheet;
 	private static XSSFWorkbook ExcelWBook;
 	private static XSSFCell Cell;
-	private static XSSFRow Row;
-	private static MissingCellPolicy xRow;
+	private static XSSFRow xRow;
+	private static MissingCellPolicy Row;
 
 	// This method is to set the File path and to open the excel file, Pass Excel Path and Sheetname as Arguments to this method .
 	public static void setExcelFile(String Path, String SheetName) throws Exception {
@@ -39,10 +39,10 @@ public class ExcelUtils {
 	// This method is to write in the Excell cell , Row num and Col num are the parameters.
 	public static void setCellData(String Result, int RowNum, int ColNum) throws Exception {
 		try {
-			Row = ExcelWSheet.getRow(RowNum);
-			Cell = Row.getCell(ColNum, xRow.RETURN_BLANK_AS_NULL);
+			xRow = ExcelWSheet.getRow(RowNum);
+			Cell = xRow.getCell(ColNum, Row.RETURN_BLANK_AS_NULL);
 			if(Cell==null) {
-				Cell=Row.createCell(ColNum);
+				Cell=xRow.createCell(ColNum);
 				Cell.setCellValue(Result);
 			}else {
 				Cell.setCellValue(Result);
